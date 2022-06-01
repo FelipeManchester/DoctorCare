@@ -1,4 +1,4 @@
-      /* GERAL  */
+      /* GERAL  */ 
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +27,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -70,9 +71,7 @@ section header h4 {
 
   text-transform: uppercase;
 
-  margin-bottom: 1.6rem;
-
-  
+  margin-bottom: 1.6rem; 
 } 
 
 section header h2 {
@@ -99,7 +98,7 @@ section .content p {
 }
 
 .button {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
 
   border: none;
   border-radius: 4rem;
@@ -137,13 +136,14 @@ section .content p {
 
   /* CUSTOM COLORS  */
  #services .card circle {
-  fill: var(--brand-light)
+  fill: var(--brand-light);
 }
 
 #navigation .logo path[fill*='#00856F'],
 #backToTopButton circle {
   fill: var(--primary-color);
 }
+
 button.open-menu path[stroke*='#00856F'],
 #contact li path {
   stroke: var(--primary-color);
@@ -158,9 +158,7 @@ body.menu-expanded #navigation .logo path,
   stroke: white;
 }
   
-
    /* NAVIGATION  */
-
    nav {
     display: flex;
     
@@ -183,14 +181,6 @@ body.menu-expanded #navigation .logo path,
     background: var(--primary-color);
   }
   
-  nav.scroll .logo path {
-    fill: white;
-  }
-  
-  nav.scroll button path {
-    stroke: white;
-  }
-  
   nav button {
     background: none;
     border: none;
@@ -199,11 +189,10 @@ body.menu-expanded #navigation .logo path,
 
   nav .menu, 
   nav .close-menu {
-    position:fixed;
+    position: fixed;
   }
 
-       /* MENU-EXPANDED  */
-     
+       /* MENU-EXPANDED  */   
 body.menu-expanded {
   overflow: hidden;
   }
@@ -241,7 +230,6 @@ body.menu-expanded {
   
     transition: transform 200ms;
     transform: translateY(0);
-  
   }
   
   .menu ul:nth-child(1) {
@@ -340,8 +328,6 @@ body.menu-expanded {
   object-position: 0 2rem;
 }
 
-
-
 #home .stats {
   width: 100%;
   padding-block: 4rem;
@@ -357,7 +343,7 @@ body.menu-expanded {
   gap: 6rem;
 }
 
-#home  .stat h3 {
+#home .stat h3 {
   font-size: 4.8rem;
   color: var(--headline);
   line-height: 130%;
@@ -365,16 +351,12 @@ body.menu-expanded {
   margin-bottom: 0.4rem;
 }
 
-.stat p {
+#home .stat p {
   margin: 0;
   color: var(--primary-color);
   font-size: 1.6rem;
   line-height: 150%;
-
-  padding-top: 4rem;
 }
-
- 
 
     /* SERVICES  */
 #services header h2 { 
@@ -405,7 +387,6 @@ body.menu-expanded {
 #about {
   text-align: left;
   background-color: var(--brand-beige);
-
 }
 
 #about header h2 {
@@ -441,11 +422,9 @@ body.menu-expanded {
   gap: 0.8rem;
 }
 
-
     /* FOOTER  */
-
 footer {
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   padding-block: 6rem;
 
   text-align: left;
@@ -506,6 +485,7 @@ footer .social-links {
    body {
      overflow: auto;
    }
+
   .wrapper {
     width: min(112rem, 100%);
     display: grid;
@@ -519,7 +499,6 @@ footer .social-links {
     grid-area: B;
   }
 
-
   section {
     padding-block: 16rem;
   }
@@ -530,12 +509,12 @@ footer .social-links {
   }
 
   /* NAVIGATION  */
-
   /* RESET */
   nav#navigation .wrapper * {
     margin: 0;
     padding: 0;
     visibility: initial;
+    display: initial;
     opacity: initial;
     flex-direction: initial;
     position: initial;
@@ -544,6 +523,7 @@ footer .social-links {
     transform: initial;
     color: initial;
     background-color: initial;
+    filter: initial;
   }
 
   nav#navigation .close-menu,
@@ -579,11 +559,11 @@ footer .social-links {
     border-radius: 4rem;
 
     color: var(--primary-color);
+
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.8rem;
     text-transform: uppercase;
-    filter: initial;
   }
 
   nav#navigation .menu a.button:hover {
@@ -602,14 +582,14 @@ footer .social-links {
     color: white;
   }
 
+  nav#navigation .menu li a {
+    transition: opacity 0.4s;
+  }
+
   nav#navigation .menu li a.active,
   nav#navigation .menu li a:hover {
     opacity: 1;
     font-weight: 700;
-  }
-
-  nav#navigation .menu li a {
-    transition: opacity .4s;
   }
 
   nav#navigation .menu li a::after {
@@ -637,12 +617,12 @@ footer .social-links {
     width: 100%;
   }
 
-  nav#navigation.scroll .menu li a:active,
+  nav#navigation.scroll .menu li a.active,
   nav#navigation.scroll .menu li a:hover {
     opacity: 1;
   }
 
-  nav#navigation.scroll .menu a.button:active,
+  nav#navigation.scroll .menu a.button.active,
   nav#navigation.scroll .menu a.button:hover {
     background-color: var(--primary-color);
     filter: brightness(1.3);
@@ -720,7 +700,6 @@ footer .social-links {
   }
 
     /* ABOUT  */
-  
   #about .wrapper {
     grid-template-columns: 48rem 1fr;
     grid-template-areas: 'B A';
@@ -735,7 +714,6 @@ footer .social-links {
     margin-bottom: 0;
   }
   
-
     /* CONTACT  */
 
   #contact .wrapper {
@@ -761,15 +739,13 @@ footer .social-links {
     align-self: center;
   }
 
+
   footer .col-b {
     align-self: center;
-    justify-content: flex-end;
+    justify-self: flex-end;
   }
 
   footer p {
     margin-bottom: 0;
   }
 }
-
- 
-  

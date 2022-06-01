@@ -25,7 +25,7 @@ function activateMenuAtCurrentSection(section) {
     sectionTopReachOrPassedTargetline && !sectionEndPassedTargetline
 
   const sectionId = section.getAttribute('id')
-  const menuElement = document.querySelector(`.menu a [href*=${sectionId}]`)
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
   menuElement.classList.remove('active')
   if (sectionBoundaries) {
@@ -61,7 +61,8 @@ ScrollReveal({
   origin: 'top',
   distance: '30px',
   duration: 700
-}).reveal(`#home,
+}).reveal(`
+ #home,
  #home img,
  #home .stats,
  #services,
